@@ -1,5 +1,5 @@
 // Saku service worker: offline app shell. Never caches API/Supabase responses.
-const CACHE = 'saku-v0.3.0';
+const CACHE = 'saku-v0.4.1';
 const SHELL = ['./', './index.html', './config.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
@@ -27,7 +27,7 @@ self.addEventListener('push', (e) => {
   e.waitUntil(self.registration.showNotification(d.title || 'Saku', {
     body: d.body || 'Waktunya mencatat pengeluaran hari ini.',
     icon: './icon-192.png', badge: './icon-192.png',
-    tag: d.tag || 'saku-reminder', renotify: false,
+    tag: d.tag || 'saku-reminder', renotify: !!d.renotify, vibrate: [120, 60, 120],
     data: { url: d.url || './#catat' },
   }));
 });
