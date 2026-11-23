@@ -1,0 +1,14 @@
+// ==============================================================
+// Saku - runtime configuration
+// Edit this ONE file after you create your Supabase project.
+// Find the values in Supabase Dashboard > Project Settings > API.
+// The anon/publishable key is designed to be public; your data is
+// protected by Row Level Security. NEVER put the service_role key
+// or the Gemini API key here.
+// Leave empty to run fully local (no login, no sync, AI offline).
+// ==============================================================
+window.SAKU_CONFIG = {
+  supabaseUrl: '',      // e.g. 'https://abcdefghijkl.supabase.co'
+  supabaseAnonKey: '',  // e.g. 'eyJhbGciOi...' or 'sb_publishable_...'
+  appName: 'Saku',
+};
