@@ -1,5 +1,5 @@
 // Saku service worker: offline app shell. Never caches API/Supabase responses.
-const CACHE = 'saku-v0.4.2';
+const CACHE = 'saku-v0.4.3';
 const SHELL = ['./', './index.html', './config.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
